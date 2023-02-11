@@ -1,8 +1,15 @@
 <?php
+  require_once("./includes/classes/FormSanitizer.php");
 
-if(isset($_POST["submit"])) {
-        echo "Form was submitted";
-    }
+  if(isset($_POST["submit"])) {
+    $firstName = FormSanitizer::sanitizeFormString($_POST["firstname"]);
+    $lastName = FormSanitizer::sanitizeFormString($_POST["lastname"]);
+
+    echo $firstName;
+    echo "<br/>";
+    echo $lastName;
+
+  }
 
 ?>
 
