@@ -2,7 +2,8 @@
 
 class FormSanitizer {
   
-  public static function sanitizeFormString($inputString) {
+  public static function sanitizeFormString(string $inputString): string 
+  {
     $inputString = strip_tags($inputString);
     $inputString = str_replace(" ", "" ,$inputString);
     $inputString = strtolower($inputString);
@@ -11,7 +12,8 @@ class FormSanitizer {
     return $inputString;
   }
 
-  public static function sanitizeFormUsername($inputString) {
+  public static function sanitizeFormUsername(string $inputString): string 
+  {
     $inputString = strip_tags($inputString);
     $inputString = str_replace(" ", "" ,$inputString);
    
@@ -19,14 +21,16 @@ class FormSanitizer {
     return $inputString;
   }
 
-  public static function sanitizeFormPassword($inputString) {
+  public static function sanitizeFormPassword(string $inputString): string
+  {
     $inputString = strip_tags($inputString);
    
 
     return $inputString;
   }
 
-   public static function sanitizeFormEmail($inputString) {
+   public static function sanitizeFormEmail(string $inputString): string
+   {
     $inputString = strip_tags($inputString);
     $inputString = str_replace(" ", "" ,$inputString);
    
